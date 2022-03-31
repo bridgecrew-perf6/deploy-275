@@ -17,7 +17,7 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          cd /home/nasrulmuhammad748/alta-be7-aws
+          cd /home/nasrulmuhammad748/deploy
           git pull origin main
           docker stop altabe7container
           docker rm altabe7container

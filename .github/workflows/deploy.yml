@@ -17,9 +17,9 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          cd /home/ubuntu/alta-be7-aws
+          cd /home/nasrulmuhammad748/alta-be7-aws
           git pull origin main
           docker stop altabe7container
           docker rm altabe7container
           docker build -t altabe7image:latest .
-          docker run -d -p 8080:8080 -e APP_PORT="8080" -e DB_PORT="3306" -e DB_DRIVER="mysql" -e DB_NAME="altagormdb" -e DB_ADDRESS="${{ secrets.DBHOST }}" -e DB_USERNAME="${{ secrets.DBUSERNAME }}" -e DB_PASSWORD="${{ secrets.DBPASSWORD }}" --name altabe7container altabe7image:latest
+          docker run -d -p 8080:8080 -e APP_PORT="8080" -e DB_PORT="3306" -e DB_DRIVER="mysql" -e DB_NAME="coba" -e DB_ADDRESS="${{ secrets.DBHOST }}" -e DB_USERNAME="${{ secrets.DBUSERNAME }}" -e DB_PASSWORD="${{ secrets.DBPASSWORD }}" --name altabe7container altabe7image:latest

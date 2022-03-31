@@ -58,7 +58,7 @@ func (uh *UserHandler) GetByIdHandler() echo.HandlerFunc {
 		if rows == 0 {
 			return c.JSON(http.StatusBadRequest, helper.ResponseFailed("data not found"))
 		}
-		return c.JSON(http.StatusOK, helper.ResponseSuccess("success get all users", users))
+		return c.JSON(http.StatusOK, helper.ResponseSuccess("success get users", users))
 	}
 }
 
